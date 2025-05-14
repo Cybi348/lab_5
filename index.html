@@ -3,67 +3,95 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Resume - Bondarenko Vitalii</title>
+    <title>Резюме - Бондаренко Віталій</title> 
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
     <div class="top-buttons">
-        <button id="feedback-btn" title="Зворотній зв'язк">
-            <i class="fas fa-comment-dots"></i> Зворотній зв'язок
+        <button id="feedback-btn" title="Зворотній зв'язок">
+            <i class="fas fa-comment-dots"></i> <span>Зворотній зв'язок</span>
         </button>
         <button id="theme-toggle" title="Перемкнути тему">
             <i class="fas fa-moon"></i>
-        </button>
+            <span class="sr-only">Перемкнути тему</span> </button>
     </div>
-    <h1>Студент Cybi</h1>
-    <p>вул.Стрийська, 73</p>
-    <p>+380 95 613 61 72</p>
-    <p>email.gmail.com</p>
-    
-    <h2>Про мене</h2>
-    <p>Студент. Вивчаю предмет Web-програмування.</p>
-    
-    <h2>Досвід роботи</h2>
-    <p><strong>Стажер веб-розробник</strong> — Freelance (2024)</p>
-    <p>Створював та редагував веб-сторінки для лабораторних робіт.</p>
-    
-    <h2>Освіта</h2>
-    <p><strong>Школа</strong> (вересень 2010-Травень 2022)</p>
-    <p>Закінчив 11 класів у школі №13</p>
-    <p><strong>Університет</strong> (вересень 2022-н.ч.)</p>
-    <p>Навчаюся</p>
 
-    <h2>Навички</h2>
-    <h3>Хард скіли</h3>
-    <ul>
-        <li>HTML5 та семантична розмітка</li>
-        <li>Git та базові команди керування версіями</li>
-        <li>Базове адміністрування систем</li>
-        <li>Основи кібербезпеки</li>
-        <li>Робота з операційними системами Windows та Linux</li>
-    </ul>
+    <header class="page-header">
+        <h1>Студент Cybi</h1>
+        <div class="contact-details">
+            <p><i class="fas fa-map-marker-alt"></i> вул. Стрийська, 73</p>
+            <p><i class="fas fa-phone-alt"></i> +380 95 613 61 72</p>
+            <p><i class="fas fa-envelope"></i> email@example.com</p> 
+        </div>
+    </header>
+    
+    <main>
+        <section id="about-me">
+            <h2>Про мене</h2>
+            <p>Студент. Вивчаю предмет Web-програмування.</p>
+        </section>
+        
+        <section id="experience">
+            <h2>Досвід роботи</h2>
+            <article> <p><strong>Стажер веб-розробник</strong> — Freelance (2024)</p>
+                <p>Створював та редагував веб-сторінки для лабораторних робіт.</p>
+            </article>
+        </section>
+        
+        <section id="education">
+            <h2>Освіта</h2>
+            <article>
+                <p><strong>Школа</strong> (вересень 2010 - травень 2022)</p> c
+                <p>Закінчив 11 класів у школі №13.</p>
+            </article>
+            <article>
+                <p><strong>Університет</strong> (вересень 2022 - н.ч.)</p>
+                <p>Навчаюся.</p>
+            </article>
+        </section>
 
-    <h3>Софт скіли</h3>
-    <ul>
-        <li>Аналітичне мислення</li>
-        <li>Уміння працювати в команді</li>
-        <li>Організованість</li>
-        <li>Самостійність у навчанні</li>
-        <li>Увага до деталей</li>
-    </ul>
+        <section id="skills">
+            <h2>Навички</h2>
+            
+            <div class="skills-category">
+                <h3>Хард скіли</h3>
+                <ul>
+                    <li>HTML5 та семантична розмітка</li>
+                    <li>Git та базові команди керування версіями</li>
+                    <li>Базове адміністрування систем</li>
+                    <li>Основи кібербезпеки</li>
+                    <li>Робота з операційними системами Windows та Linux</li>
+                </ul>
+            </div>
 
-    <section>
-        <h3>Відгуки роботодавців</h3>
-        <ul id="comments-list"></ul>
-    </section>
+            <div class="skills-category">
+                <h3>Софт скіли</h3>
+                <ul>
+                    <li>Аналітичне мислення</li>
+                    <li>Уміння працювати в команді</li>
+                    <li>Організованість</li>
+                    <li>Самостійність у навчанні</li>
+                    <li>Увага до деталей</li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="testimonials">
+            <h2>Відгуки роботодавців</h2> <ul id="comments-list">
+                </ul>
+        </section>
+    </main>
 
     <footer id="info-footer">
         <h3>Інформація про браузер та систему:</h3>
         <pre id="system-info"></pre>
     </footer>
-     <!-- Модальне вікно для форми зворотного зв'язку -->
-     <div id="feedback-modal" class="modal">
+    
+    <div id="feedback-modal" class="modal">
         <div class="modal-content">
             <h3>Форма зворотного зв'язку</h3>
             <form id="feedback-form" action="https://formspree.io/f/movdjgkr" method="POST">
@@ -79,7 +107,7 @@
                 
                 <div class="form-group">
                     <label for="phone">Номер телефону:</label>
-                    <input type="tel" id="phone" name="phone">
+                    <input type="tel" id="phone" name="phone" placeholder="Необов'язково">
                 </div>
                 
                 <div class="form-group">
